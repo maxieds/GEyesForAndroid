@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainRunnerActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimaryBorder" />
+
+    <Toolbar
+        android:id="@+id/toolbarActionBar"
+        style="Base.Theme.AppCompat.Light.DarkActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:subtitleTextAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:titleTextAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimaryBorder" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/positionTrackerDrawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/untracked_marker"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/new_eye_theme_icon"
+            android:text="New Eyes"
+            android:onClick="createNewEyeThemeLauncher"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/clear_all_icon"
+            android:text="Clear All"
+            android:onClick="clearAllEyesLauncher"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/track_path_icon"
+            android:text="Source"
+            android:onClick="changeTrackPathLauncher"/>
+
+        <Button
+            android:id="@+id/aboutApplicationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/about_process"
+            android:text="About"
+            android:onClick="aboutApplicationLauncher"
+            android:layout_gravity="right|center_vertical"/>
+
+        <Button
+            android:id="@+id/reportBugButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/report_bug"
+            android:text="Report"
+            android:onClick="reportBugLauncher"
+            android:layout_gravity="right|center_vertical" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimaryBorder" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/silver_metal_gradient">
+        
+        <GridLayout
+            android:id="@+id/eyeGridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:columnCount="2">
+
+        </GridLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimaryBorder" />
+
+
+
+
+
+</LinearLayout>
